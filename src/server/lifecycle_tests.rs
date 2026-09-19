@@ -100,11 +100,13 @@ impl Suite {
             .env("TMPDIR", &root)
             .env("RESTATE_LIFECYCLE_PAUSES", pauses)
             .stdout(Stdio::from(log.try_clone().expect("suite log")))
-            .stderr(if matches!(scenario, "stderr-failure" | "signal-stderr-failure") {
-                Stdio::piped()
-            } else {
-                Stdio::from(log)
-            })
+            .stderr(
+                if matches!(scenario, "stderr-failure" | "signal-stderr-failure") {
+                    Stdio::piped()
+                } else {
+                    Stdio::from(log)
+                },
+            )
             .spawn()
             .expect("isolated suite process");
         Self { child, root }
