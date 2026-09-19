@@ -1,6 +1,12 @@
 [graph]
 all-features = true
 
+[advisories]
+# Transitive rsa via the SDK's JWT dependency; request identity uses EdDSA public
+# key verification, not RSA private-key operations. No patched release exists.
+# Revisit on an upstream fix or crypto usage change; see .cargo/audit.toml.
+ignore = ["RUSTSEC-2023-0071"]
+
 [licenses]
 allow = [
   "Apache-2.0",
