@@ -1,5 +1,8 @@
 # Restate E2E Harness
 
+> [!WARNING]
+> The content of this repository has moved to [restate-toolkit](https://github.com/sagikazarmark/restate-toolkit).
+
 [![ci](https://img.shields.io/github/actions/workflow/status/sagikazarmark/restate-e2e-harness/dagger.yaml?style=flat-square&label=ci)](https://github.com/sagikazarmark/restate-e2e-harness/actions/workflows/dagger.yaml)
 [![openssf scorecard](https://api.securityscorecards.dev/projects/github.com/sagikazarmark/restate-e2e-harness/badge?style=flat-square&label=openssf%20scorecard)](https://securityscorecards.dev/viewer/?uri=github.com/sagikazarmark/restate-e2e-harness)
 [![crates.io](https://img.shields.io/crates/v/restate-e2e-harness?style=flat-square)](https://crates.io/crates/restate-e2e-harness)
